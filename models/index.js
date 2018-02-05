@@ -7,4 +7,4 @@ mongoose.connect("mongodb://localhost/racebets-api");
 mongoose.Promise = Promise;
 
 // export Race schema
-module.exports.Todo = require("./race");
+module.exports.Race = require("./race");

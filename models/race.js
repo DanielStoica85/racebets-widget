@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
 const raceSchema = new mongoose.Schema({
+    id_race: {
+        type: Number,
+        required: true
+    },
     event: {
         title: {
             type: String,
@@ -16,8 +20,8 @@ const raceSchema = new mongoose.Schema({
         required: true
     },
     post_time: {
-        type: Date,
-        default: true
+        type: Number,
+        default: Math.floor(Date.now() / 1000)
     },
     num_runners: {
         type: Number,
@@ -38,7 +42,25 @@ const raceSchema = new mongoose.Schema({
         }
     },
     runners: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Runner'
+        id_runner: {
+            type: Number,
+            required: true
+        },
+        name: {
+            type: String,
+            required: true,
+        },
+        odds: {
+            type: Number,
+            required: true
+        },
+        silk: {
+            type: String,
+            default: ''
+        }
     }]
 });
+
+const Race = mongoose.model("Race", raceSchema);
+
+module.exports = Race;
