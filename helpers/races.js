@@ -17,8 +17,8 @@ exports.getRaces = (req, res) => {
 
 exports.addRace = (req, res) => {
     db.Race.create(req.body)
-        .then((newTodo) => {
-            res.status(201).json(newTodo);
+        .then((newRace) => {
+            res.status(201).json(newRace);
             console.log('Added new race!');
         })
         .catch((err) => {

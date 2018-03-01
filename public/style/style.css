@@ -1,0 +1,31 @@
+body {
+    font-family: Tahoma, Geneva, Kalimati, sans-serif;
+    font-size: 11px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-image: linear-gradient(#ffeec6,#ffb841);
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#next-race {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    width: 20%;
+}
+
+
