@@ -3,6 +3,9 @@ const db = require("../models");
 exports.getRaces = (req, res) => {
     db.Race.find()
         .then((races) => {
+            races.forEach((race) => {
+                race.post_time = Math.floor(Date.now() / 1000) + Math.floor(Math.random() * 3600) + 1;
+            });
             res.json({
                 status: "success",
                 data: {
