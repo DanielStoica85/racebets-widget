@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>This is Racebets</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <ul id="race-type-filter">
+            <li class="race-type">
+                <input class="filter-checkbox" checked id="gallop" type="checkbox" />
+                <label for="gallop">Gallop</label>
+            </li>
+            <li class="race-type">
+                <input class="filter-checkbox" checked id="jumping" type="checkbox" />
+                <label for="jumping">Jumps</label>
+            </li>
+            <li class="race-type">
+                <input class="filter-checkbox" checked id="trot" type="checkbox" />
+                <label for="trot">Trot</label>
+            </li>
+            <li class="race-type">
+                <input class="filter-checkbox" id="dogs" type="checkbox" />
+                <label for="dogs">Dogs</label>
+            </li>
+        </ul>
+        <div id="next-race">
+            <div id="next-race-head">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/nextRace.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
