@@ -20,7 +20,14 @@ class NextRace {
         return maxPurseRaceId;
     }
 
-    getHighestPurseRace(races, highestPurseRaceId) {
+    // get race of highest purse
+    getHighestPurseRace(checkedTypes, races) {
+
+        // get races of checked race types
+        let typeFilteredRaces = nextRace.getTypeFilteredRaces(checkedTypes, races);
+        // get race id of checked type with highest purse
+        let highestPurseRaceId = nextRace.getHighestPurseRaceId(typeFilteredRaces);
+
         return races.filter(race => race.id_race === highestPurseRaceId)[0];
     }
 
