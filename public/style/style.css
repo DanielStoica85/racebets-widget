@@ -1,0 +1,229 @@
+body {
+    font-family: Tahoma, Geneva, Kalimati, sans-serif;
+    font-size: 11px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.container {
+    background-image: -webkit-linear-gradient(#ffeec6, #ffb841);
+    background-image: linear-gradient(#ffeec6, #ffb841);
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+#race-type-filter {
+    min-width: 240px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 5px 0;
+}
+
+.race-type {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: center;
+}
+
+.filter-checkbox+label {
+    position: relative;
+    padding-left: 1px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.filter-checkbox+label:before {
+    background-color: #ffb841;
+    border-radius: 3px;
+    content: ' ';
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: -5px;
+    left: -20px;
+    padding: 2px 1px 0;
+    /* For styling the content text, following next*/
+    font-size: 12px;
+    text-align: center;
+}
+
+.filter-checkbox:checked+label:before {
+    color: black;
+    content: '✔';
+}
+
+#next-race {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+    border-radius: 3px;
+    border: 3px solid transparent;
+    width: 240px;
+    height: 185px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.no-races {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#next-race-head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    line-height: 1.4;
+    font-weight: 700;
+    padding: 8px 8px 0 8px;
+    margin-bottom: 8px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.race-city {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+    padding: 0 5px;
+    text-align: left;
+}
+
+.race-city h3 {
+    display: inline-block;
+}
+
+.flag {
+    height: 16px;
+    width: 16px;
+}
+
+.country-GB {
+    background: url('../img/flag_uk.png') center no-repeat;
+}
+
+.country-IE {
+    background: url('../img/flag_ireland.png') center no-repeat;
+}
+
+.next-race-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    line-height: 1.4;
+    padding: 8px 8px 0 3px;
+    margin-bottom: 8px;
+    border-top: 1px solid #666;
+}
+
+.race-details {
+    padding-left: 5px;
+}
+
+.icon {
+    width: 50px;
+    height: 18px;
+    text-align: right;
+}
+
+.runners-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    min-width: 234px;
+    background-color: #fff;
+}
+
+.runner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.runner img {
+    padding: 5px 10px;
+}
+
+.runner p {
+    color: #444;
+    padding: 0 7px;
+}
+
+.runner a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.no-silk-runner {
+    width: 100%;
+    padding: 9px 0 10px 51px;
+}
+
+.runner .bet-button {
+    background-image: linear-gradient(#ffd361,#f69610);
+    border: 1px solid #f69610;
+    min-width: 36px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 10px;
+    color: #444;
+    text-align: center;
+    line-height: 1.4;
+}
