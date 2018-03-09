@@ -9,6 +9,7 @@ class UI {
 
     getCheckedRaceTypes() {
         let checkedRaceTypes = [];
+        this.raceTypeInputs = Array.prototype.slice.call(this.raceTypeInputs, 0);
         this.raceTypeInputs.forEach((input) => {
             if (input.checked === true) {
                 checkedRaceTypes.push(input.id);
@@ -171,6 +172,5 @@ class UI {
     displayErrorMessage(message) {
         this.nextRaceWidget.innerHTML = `<h3 class="no-races">${message}</h3>`;
     }
-
-
+    
 }
