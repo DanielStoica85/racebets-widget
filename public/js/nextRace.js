@@ -31,4 +31,8 @@ class NextRace {
         return races.filter(race => race.id_race === highestPurseRaceId)[0];
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae30ad8202801c588b14e303945dea00f71ab7f1
 }

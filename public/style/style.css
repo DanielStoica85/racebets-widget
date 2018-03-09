@@ -40,7 +40,11 @@ a {
 }
 
 #race-type-filter {
+<<<<<<< HEAD
     min-width: 240px;
+=======
+    width: 240px;
+>>>>>>> ae30ad8202801c588b14e303945dea00f71ab7f1
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -101,6 +105,7 @@ a {
     border-color: #333;
     color: #fff;
     border-radius: 3px;
+<<<<<<< HEAD
     border: 3px solid transparent;
     width: 240px;
     height: 185px;
@@ -113,6 +118,10 @@ a {
     text-align: center;
     width: 90%;
     margin: 0 auto;
+=======
+    border: 1px solid transparent;
+    width: 240px;
+>>>>>>> ae30ad8202801c588b14e303945dea00f71ab7f1
 }
 
 #next-race-head {
@@ -167,7 +176,10 @@ a {
     line-height: 1.4;
     padding: 8px 8px 0 3px;
     margin-bottom: 8px;
+<<<<<<< HEAD
     border-top: 1px solid #666;
+=======
+>>>>>>> ae30ad8202801c588b14e303945dea00f71ab7f1
 }
 
 .race-details {
@@ -175,6 +187,7 @@ a {
 }
 
 .icon {
+<<<<<<< HEAD
     width: 50px;
     height: 18px;
     text-align: right;
@@ -226,4 +239,23 @@ a {
     color: #444;
     text-align: center;
     line-height: 1.4;
+=======
+    background: url('../img/icons.png') no-repeat;
+    width: 30px;
+    height: 18px;
+    background-color: transparent;
+    margin: 0 auto;
+}
+
+.icon-J {
+    background-position: 0 -296px;
+}
+
+.icon-T {
+    background-position: 0 -352px;
+}
+
+.icon-G {
+    background-position: 0 -380px;
+>>>>>>> ae30ad8202801c588b14e303945dea00f71ab7f1
 }

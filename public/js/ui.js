@@ -4,7 +4,10 @@ class UI {
     constructor() {
         this.nextRaceWidget = document.getElementById('next-race');
         this.raceTypeInputs = document.querySelectorAll('.filter-checkbox');
+<<<<<<< HEAD
         this.updateTimeLeft;
+=======
+>>>>>>> ae30ad8202801c588b14e303945dea00f71ab7f1
     }
 
     getCheckedRaceTypes() {
@@ -17,6 +20,7 @@ class UI {
         return checkedRaceTypes.map(raceType => raceType.slice(0, 1).toUpperCase());
     }
 
+<<<<<<< HEAD
     populateNextRace(races) {
 
         // get checked statuses
@@ -45,6 +49,8 @@ class UI {
 
     }
 
+=======
+>>>>>>> ae30ad8202801c588b14e303945dea00f71ab7f1
     displayHighestPurseRace(highestPurseRace) {
 
         let output = '';
@@ -53,16 +59,23 @@ class UI {
 
         output +=
             `<div id="next-race-head">
+<<<<<<< HEAD
                 
                 <a href="/race/details/${highestPurseRace.id_race}"><div class="flag country-${highestPurseRace.event.country}"></div></a>
                 <div class="race-city"><a href="/race/details/${highestPurseRace.id_race}"><h3>${highestPurseRace.event.title}</h3></a></div>
                 <div id="time-left"><a href="/race/details/${highestPurseRace.id_race}"><h3>${minutesUntilHighestPurseRace} minutes</h3></a></div>
                 
+=======
+                <div class="flag country-${highestPurseRace.event.country}"></div>
+                <div class="race-city"><h3>${highestPurseRace.event.title}</h3></div>
+                <div id="time-left"><h3>${minutesUntilHighestPurseRace} minutes</h3></div>
+>>>>>>> ae30ad8202801c588b14e303945dea00f71ab7f1
             </div>`;
 
         this.nextRaceWidget.innerHTML = output;
         this.timeLeftDisplay = document.querySelector('#time-left h3');
 
+<<<<<<< HEAD
         if (this.updateTimeLeft) {
             clearInterval(this.updateTimeLeft);            
         }
@@ -79,6 +92,12 @@ class UI {
                 this.timeLeftDisplay.textContent = 'Started';
                 clearInterval(this.updateTimeLeft);
             }
+=======
+        // update time until race
+        setInterval(() => {
+            this.timeLeftDisplay.textContent = Math.floor((highestPurseRace.post_time - Math.floor(Date.now() / 1000)) / 60) + ' minutes';
+            console.log(this.timeLeftDisplay.textContent);
+>>>>>>> ae30ad8202801c588b14e303945dea00f71ab7f1
         }, 60000);
 
     }
@@ -87,6 +106,7 @@ class UI {
 
         let nextRaceBody = document.createElement('div');
         nextRaceBody.classList.add('next-race-body');
+<<<<<<< HEAD
         this.nextRaceWidget.appendChild(nextRaceBody);
 
         this.displayNumberOfRunners(nextRaceBody, highestPurseRace);
@@ -121,11 +141,48 @@ class UI {
         purseDiv.classList.add('race-details', 'purse');
         purseDiv.innerHTML = `<a href="/race/details/${highestPurseRace.id_race}"><span>${highestPurseRace.purse.amount} ${highestPurseRace.purse.currency} |</span></a>`;
         nextRaceBody.appendChild(purseDiv);
+=======
+        nextRaceBody.innerHTML = `<a href="/race/details/id/${highestPurseRace.id_race}"></a>`;
+        this.nextRaceWidget.appendChild(nextRaceBody);
+        let nextRaceLink = document.querySelector('.next-race-body a');
+
+        ui.displayNumberOfRunners(nextRaceLink, highestPurseRace);
+        ui.displayDistance(nextRaceLink, highestPurseRace);
+        ui.displayPurse(nextRaceLink, highestPurseRace);
+        ui.displayIcon(nextRaceBody, highestPurseRace);
+    }
+
+    displayNumberOfRunners(nextRaceLink, highestPurseRace) {
+
+        let runnersSpan = document.createElement('span');
+        runnersSpan.classList.add('race-details', 'runners');
+        runnersSpan.textContent = `${highestPurseRace.num_runners} Runners |`;
+        nextRaceLink.appendChild(runnersSpan);
+
+    }
+
+    displayDistance(nextRaceLink, highestPurseRace) {
+
+        let distanceSpan = document.createElement('span');
+        distanceSpan.classList.add('race-details', 'distance');
+        distanceSpan.textContent = ` ${highestPurseRace.distance} m |`;
+        nextRaceLink.appendChild(distanceSpan);
+
+    }
+
+    displayPurse(nextRaceLink, highestPurseRace) {
+
+        let purseSpan = document.createElement('span');
+        purseSpan.classList.add('race-details', 'purse');
+        purseSpan.textContent = ` ${highestPurseRace.purse.amount} ${highestPurseRace.purse.currency} |`;
+        nextRaceLink.appendChild(purseSpan);
+>>>>>>> ae30ad8202801c588b14e303945dea00f71ab7f1
 
     }
 
     displayIcon(nextRaceBody, highestPurseRace) {
 
+<<<<<<< HEAD
         let iconDiv = document.createElement('div');
         iconDiv.classList.add('race-details', 'icon', `icon-${highestPurseRace.race_type}`);
         let iconImage = document.createElement('img');
@@ -170,6 +227,12 @@ class UI {
 
     displayErrorMessage(message) {
         this.nextRaceWidget.innerHTML = `<h3 class="no-races">${message}</h3>`;
+=======
+        let iconSpan = document.createElement('span');
+        iconSpan.classList.add('race-details', 'icon', `icon-${highestPurseRace.race_type}`);
+        nextRaceBody.appendChild(iconSpan);
+
+>>>>>>> ae30ad8202801c588b14e303945dea00f71ab7f1
     }
 
 
